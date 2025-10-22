@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Ponderada - Circuito RC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header h2 {
+            font-size: 1.3em;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+        }
+
+        .proposition {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .graph-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .graph-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 3px solid #ecf0f1;
+        }
+
+        .graph-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+
+        .answer {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e0e6ed;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .answer p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .section h3 {
+                font-size: 1.3em;
+            }
+        }
+
+        /* Animação suave */
+        .container {
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Atividade Ponderada de Programação</h1>
+            <h2>Semana 2 - Aula 1</h2>
+        </header>
+
+        <main class="content">
+            <div class="section">
+                <h3>📋 Informações do Aluno</h3>
+                <p><strong>Nome:</strong> Rafael Santana Rodrigues</p>
+                <p><strong>Turma:</strong> T15 - Grupo 3</p>
+            </div>
+
+            <div class="section">
+                <h3>❓ Preposição</h3>
+                <div class="proposition">
+                    Explique, com base no comportamento observado no gráfico e nos conceitos de tempo de carga e descarga, por que o circuito RC é capaz de eliminar os repiques (bouncing) de um botão e, ao mesmo tempo, filtrar ruídos vindos de sensores piezoelétricos.
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>📊 Gráfico</h3>
+                <div class="graph-section">
+                    <img src="image.png" alt="Gráfico de carga e descarga do circuito RC">
+                    <div class="graph-caption">
+                        Gráfico de carga e descarga do circuito RC
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>💡 Resposta</h3>
+                <div class="answer">
+                    <p>
+                        O <span class="highlight">circuito RC</span> elimina os repiques de um botão e filtra ruídos de sensores piezoelétricos devido ao comportamento do capacitor em relação ao tempo de carga e descarga. O capacitor no circuito RC funciona como um <span class="highlight">filtro passa-baixa</span> (comentado em aula), permitindo apenas sinais de baixa frequência passarem, enquanto atenua sinais de alta frequência, como os repiques e ruídos.
+                    </p>
+                    
+                    <p>
+                        Quando o botão é pressionado, o capacitor começa a carregar, mas devido ao <span class="highlight">tempo constante do circuito RC</span>, ele não responde imediatamente às rápidas variações causadas pelos repiques. Isso resulta em um sinal de saída mais estável e livre de oscilações indesejadas.
+                    </p>
+                    
+                    <p>
+                        Além disso, os <span class="highlight">sensores piezoelétricos</span> podem gerar ruídos de alta frequência devido a vibrações ou impactos. O circuito RC filtra esses ruídos, permitindo que apenas os sinais de baixa frequência, que são mais relevantes para a aplicação, sejam transmitidos.
+                    </p>
+                    
+                    <p>
+                        Levando em consideração o gráfico observado, podemos ver que o <span class="highlight">tempo de carga do capacitor se equipara ao tempo de descarga do resistor</span>, o que reforça a capacidade do circuito RC de suavizar variações rápidas no sinal, eliminando repiques e filtrando ruídos eficazmente. Por essas variações de voltagem serem mais suaves e lentas, o circuito RC consegue estabilizar o sinal de saída.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Inteli - Instituto de Tecnologia e Liderança | Módulo 4</p>
+        </footer>
+    </div>
+</body>
+</html>
